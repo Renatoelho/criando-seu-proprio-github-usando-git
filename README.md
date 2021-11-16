@@ -87,7 +87,7 @@ $ git clone ubuntu@localhost:/home/ubuntu/repo_central.git arquivos_clonados
 
 Pronto, tudo instalado e configurado a partir de agora você pode utilizar esse ambiente para versionar seus códigos, além de poder distribuir o acesso a quem você queria que tenha esse acesso.
 
-Em breve eu volto para ensinar como utilizar os principais comandos do Git que podem ser utilizados, tanto no Git como no GitHub ou GitLab.
+Em breve eu volto para ensinar os principais comandos do Git que podem ser utilizados, tanto no Git como no GitHub ou GitLab.
 
 **Até.**
 
