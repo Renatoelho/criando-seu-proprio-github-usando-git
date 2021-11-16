@@ -1,22 +1,22 @@
-# Criando seu próprio <i>‘GitHub’</i> usando o Git
+# Criando seu prÃ³prio <i>â€˜GitHubâ€™</i> usando o Git
 
-### Requisitos mínimos para instalação:
+### Requisitos mÃ­nimos para instalaÃ§Ã£o:
 
->> Sistema operacional Linux (Ubuntu 20.04.2 LTS)  <br/>Memória RAM de 4GB ou mais  <br/>Versão mais recente do Git
+>> Sistema operacional Linux (Ubuntu 20.04.2 LTS)  <br/>MemÃ³ria RAM de 4GB ou mais  <br/>VersÃ£o mais recente do Git
 
-O Git é um software de versionamento de código como muitos outros que existem, mas graças ao GitHub que é uma plataforma web de distribuição códigos e que usa por traz o código do Git tornou essa ferramenta muito famosa na comunidade de desenvolvimento. O que muita gente não sabe que é possível criar seu próprio <i>‘GitHub’</i>, mas sem interface gráfica, onde você ficará responsável por administrar toda infraestrutura e os reportórios, existem outras variações no mercado como o GitLab que é uma variação do GitHub muito usado em ambientes corporativos.
+O Git Ã© um software de versionamento de cÃ³digo como muitos outros que existem, mas graÃ§as ao GitHub que Ã© uma plataforma web de distribuiÃ§Ã£o cÃ³digos e que usa por traz o cÃ³digo do Git tornou essa ferramenta muito famosa na comunidade de desenvolvimento. O que muita gente nÃ£o sabe que Ã© possÃ­vel criar seu prÃ³prio <i>â€˜GitHubâ€™</i>, mas sem interface grÃ¡fica, onde vocÃª ficarÃ¡ responsÃ¡vel por administrar toda infraestrutura e os reportÃ³rios, existem outras variaÃ§Ãµes no mercado como o GitLab que Ã© uma variaÃ§Ã£o do GitHub muito usado em ambientes corporativos.
 
-Encare essa minha abordagem de maneira mais conceitual, pois sabemos que a utilização do GitHub e de sua interface facilita muito a vida de quem utiliza a plataforma para desenvolvimento, mas sempre é válido entender o funcionamento de ferramentas que estão no nosso dia a dia.
+Encare essa minha abordagem de maneira mais conceitual, pois sabemos que a utilizaÃ§Ã£o do GitHub e de sua interface facilita muito a vida de quem utiliza a plataforma para desenvolvimento, mas sempre Ã© vÃ¡lido entender o funcionamento de ferramentas que estÃ£o no nosso dia a dia.
 
-Como eu disse, é possível criar seu repositório de códigos utilizando uma VPN ou uma máquina virtual hospedada em qualquer um dos principais fornecedores de Cloud como AWS, Azure, GCP entre outros e instalando nessa máquina o Git na sua versão mais recente já é possível criar seus repositórios e administrar sua rotina de desenvolvimento ou de sua equipe. 
+Como eu disse, Ã© possÃ­vel criar seu repositÃ³rio de cÃ³digos utilizando uma VPN ou uma mÃ¡quina virtual hospedada em qualquer um dos principais fornecedores de Cloud como AWS, Azure, GCP entre outros e instalando nessa mÃ¡quina o Git na sua versÃ£o mais recente jÃ¡ Ã© possÃ­vel criar seus repositÃ³rios e administrar sua rotina de desenvolvimento ou de sua equipe. 
 
-### Aqui é a representação gráfica de como ficaria sua infraestrutura:
+### Aqui Ã© a representaÃ§Ã£o grÃ¡fica de como ficaria sua infraestrutura:
 
 ![Servidor Git](https://drive.google.com/uc?export=view&id=1DqSfEgnI15rY6IbfghbhESm4UKhiE85Q)
 
-Nesse exemplo aqui vou utilizar uma máquina virtual local, mas esses mesmos passos podem ser replicados em uma VPN ou Cloud.
+Nesse exemplo aqui vou utilizar uma mÃ¡quina virtual local, mas esses mesmos passos podem ser replicados em uma VPN ou Cloud.
 
-## 1º Passo - Instalando o Git
+## 1Âº Passo - Instalando o Git
 
 - Atualize o ambiente antes de iniciar o processo com os seguintes comandos:
 
@@ -30,27 +30,27 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install git -y
 ````
 
-![Instalação do Git](https://drive.google.com/uc?export=view&id=1EBgO94ijhqrLTj1pd_3SPLvPr0wkS6z6)
+![InstalaÃ§Ã£o do Git](https://drive.google.com/uc?export=view&id=1EBgO94ijhqrLTj1pd_3SPLvPr0wkS6z6)
 
 Instalado com sucesso.
 
-## 2º Passo - Criando o repositório central
+## 2Âº Passo - Criando o repositÃ³rio central
 
-Agora vamos criar um diretório no nosso servidor e vamos utilizar ele como repositório central.
+Agora vamos criar um diretÃ³rio no nosso servidor e vamos utilizar ele como repositÃ³rio central.
 
-- Criando um diretório:
+- Criando um diretÃ³rio:
 
 ````
 mkdir -p repo_central.git
 ````
 
-- Acessando o diretório:
+- Acessando o diretÃ³rio:
 
 ````
 cd repo_central.git
 ````
 
-- Iniciando o diretório como um repositório central:
+- Iniciando o diretÃ³rio como um repositÃ³rio central:
 
 ````
 git init --bare
@@ -58,9 +58,9 @@ git init --bare
 
 ![Criando Repo Central](https://drive.google.com/uc?export=view&id=1ECBLX7rV7uAPuv4BqmetkaM5R10a6BHW)
 
-## 3º Passo - Vinculando uma pasta qualquer ao repositório (local)
+## 3Âº Passo - Vinculando uma pasta qualquer ao repositÃ³rio (local)
 
-Agora vamos escolher um suposto diretório onde teríamos um projeto ou vários para vinculá-lo ao repositório central e assim poder movimentar códigos entre eles.  
+Agora vamos escolher um suposto diretÃ³rio onde terÃ­amos um projeto ou vÃ¡rios para vinculÃ¡-lo ao repositÃ³rio central e assim poder movimentar cÃ³digos entre eles.  
 
 ````
 $ cd projetos/
@@ -70,11 +70,11 @@ $ git remote add origin /home/ubuntu/repo_central.git
 
 ![Remote Add git](https://drive.google.com/uc?export=view&id=1ENcu9DWpalNOeLvb8Py9wEP_HU_hr5U4)
 
-## 4º Passo - Clonando o repositório central (remoto)
+## 4Âº Passo - Clonando o repositÃ³rio central (remoto)
 
-Clonar é mais uma forma de criar esse vínculo, entre uma determinada pasta preferencialmente em uma máquina que vai ser utilizada para desenvolvimento e vinculada ao repositório central do Git.
+Clonar Ã© mais uma forma de criar esse vÃ­nculo, entre uma determinada pasta preferencialmente em uma mÃ¡quina que vai ser utilizada para desenvolvimento e vinculada ao repositÃ³rio central do Git.
 
-**Sintaxe:** ````git clone <usuário>@<servidor>:<Local do repositório central> <diretório que vai receber o clone>````
+**Sintaxe:** ````git clone <usuÃ¡rio>@<servidor>:<Local do repositÃ³rio central> <diretÃ³rio que vai receber o clone>````
 
 ````
 $ cd projetos2/
@@ -83,13 +83,13 @@ $ git clone ubuntu@localhost:/home/ubuntu/repo_central.git arquivos_clonados
 
 ![Clonando Repo Central](https://drive.google.com/uc?export=view&id=1EPEbjqk1iOHBQTNh49u46YgmmhZwePRN)
 
->> **Observação:** apareceu uma notificação de <i>warning</i>, pois como o repositório do Git está vazio aparece essa mensagem, caso contrário não apareceria outro ponto importante é que no <i>clone</i> feito conforme sintaxe acima é necessário que o servidor onde está o Git e a máquina cliente tenham o <i>SSH</i> instalado, como em nosso exemplo o servidor e o cliente são **a mesma máquina** só é necessária uma única configuração <i>SSH</i>.
+>> **ObservaÃ§Ã£o:** apareceu uma notificaÃ§Ã£o de <i>warning</i>, pois como o repositÃ³rio do Git estÃ¡ vazio aparece essa mensagem, caso contrÃ¡rio nÃ£o apareceria. Outro ponto importante Ã© que no <i>clone</i> feito conforme sintaxe acima Ã© necessÃ¡rio que o servidor onde estÃ¡ o Git e a mÃ¡quina cliente tenham o <i>SSH</i> instalado, como em nosso exemplo o servidor e o cliente sÃ£o **a mesma mÃ¡quina** sÃ³ Ã© necessÃ¡ria uma Ãºnica configuraÃ§Ã£o <i>SSH</i>.
 
-Pronto, tudo instalado e configurado a partir de agora você pode utilizar esse ambiente para versionar seus códigos, além de poder distribuir o acesso a quem você queria que tenha esse acesso e aos códigos.
+Pronto, tudo instalado e configurado a partir de agora vocÃª pode utilizar esse ambiente para versionar seus cÃ³digos, alÃ©m de poder distribuir o acesso a quem vocÃª queria que tenha esse acesso.
 
 Em breve eu volto para ensinar como utilizar os principais comandos do Git que podem ser utilizados, tanto no Git como no GitHub ou GitLab.
 
-**Até.**
+**AtÃ©.**
 
-**Referências:**  <br/><font size="1">Wikipédia, **Git.** Disponível em:<https://pt.wikipedia.org/wiki/Git>. Acesso em: 16 nov. 2021.  <br/> Git-scm.com, **Git --fast-version-control.** Disponível em: <https://git-scm.com/docs/git/pt_BR>. Acesso em: 16 nov. 2021.  <br/> Wikipédia, **GitHub.** Disponível em:<https://pt.wikipedia.org/wiki/GitHub>. Acesso em: 16 nov. 2021.  <br/> Wikipédia, **GitLab.** Disponível em:< https://pt.wikipedia.org/wiki/GitLab>. Acesso em: 16 nov. 2021.  <br/></font>
+**ReferÃªncias:**  <br/><font size="1">WikipÃ©dia, **Git.** DisponÃ­vel em:<https://pt.wikipedia.org/wiki/Git>. Acesso em: 16 nov. 2021.  <br/> Git-scm.com, **Git --fast-version-control.** DisponÃ­vel em: <https://git-scm.com/docs/git/pt_BR>. Acesso em: 16 nov. 2021.  <br/> WikipÃ©dia, **GitHub.** DisponÃ­vel em:<https://pt.wikipedia.org/wiki/GitHub>. Acesso em: 16 nov. 2021.  <br/> WikipÃ©dia, **GitLab.** DisponÃ­vel em:< https://pt.wikipedia.org/wiki/GitLab>. Acesso em: 16 nov. 2021.  <br/></font>
 
