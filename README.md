@@ -4,11 +4,11 @@
 
 >> Sistema operacional Linux (Ubuntu 20.04.2 LTS)  <br/>Memória RAM de 4GB ou mais  <br/>Versão mais recente do Git
 
-O Git é um software de versionamento de código como muitos outros que existem, mas graças ao GitHub que é uma plataforma web de distribuição códigos e que usa por traz o código do Git tornou essa ferramenta muito famosa na comunidade de desenvolvimento. O que muita gente não sabe que é possível criar seu próprio <i>‘GitHub’</i>, mas sem interface gráfica, onde você ficará responsável por administrar toda infraestrutura e os reportórios, existem outras variações no mercado como o GitLab que é uma variação do GitHub muito usado em ambientes corporativos.
+O Git é um software de versionamento de código, como muitos outros que existem. Graças ao GitHub, que é uma plataforma web de distribuição de códigos e que usa por trás o código do Git, tornou essa ferramenta muito famosa na comunidade de desenvolvimento. O que muita gente não sabe que é possível criar seu próprio <i>‘GitHub’</i>, mas sem interface gráfica, onde você ficará responsável por administrar toda infraestrutura e os reportórios. Existem outras variações no mercado, como o GitLab, que é uma variação do GitHub muito usado em ambientes corporativos.
 
 Encare essa minha abordagem de maneira mais conceitual, pois sabemos que a utilização do GitHub e de sua interface facilita muito a vida de quem utiliza a plataforma para desenvolvimento, mas sempre é válido entender o funcionamento de ferramentas que estão no nosso dia a dia.
 
-Como eu disse, é possível criar seu repositório de códigos utilizando uma VPN ou uma máquina virtual hospedada em qualquer um dos principais fornecedores de Cloud como AWS, Azure, GCP entre outros e instalando nessa máquina o Git na sua versão mais recente já é possível criar seus repositórios e administrar sua rotina de desenvolvimento ou de sua equipe. 
+Como eu disse, é possível criar seu repositório de códigos utilizando uma VPN ou uma máquina virtual hospedada em qualquer um dos principais fornecedores de Cloud, como AWS, Azure, GCP, entre outros. Instalando nessa máquina o Git na sua versão mais recente, já é possível criar seus repositórios e administrar sua rotina de desenvolvimento ou de sua equipe. 
 
 ### Aqui é a representação gráfica de como ficaria sua infraestrutura:
 
@@ -60,7 +60,7 @@ git init --bare
 
 ## 3º Passo - Vinculando uma pasta qualquer ao repositório (local)
 
-Agora vamos escolher um suposto diretório onde teríamos um projeto ou vários para vinculá-lo ao repositório central e assim poder movimentar códigos entre eles.  
+Agora vamos escolher um suposto diretório, onde teríamos um projeto ou vários para vinculá-lo ao repositório central e assim poder movimentar códigos entre eles.  
 
 ````
 $ cd projetos/
@@ -72,7 +72,7 @@ $ git remote add origin /home/ubuntu/repo_central.git
 
 ## 4º Passo - Clonando o repositório central (remoto)
 
-Clonar é mais uma forma de criar esse vínculo, entre uma determinada pasta preferencialmente em uma máquina que vai ser utilizada para desenvolvimento e vinculada ao repositório central do Git.
+Clonar é mais uma forma de criar esse vínculo com uma determinada pasta, preferencialmente em uma máquina que vai ser utilizada para desenvolvimento e vinculada ao repositório central do Git.
 
 **Sintaxe:** ````git clone <usuário>@<servidor>:<Local do repositório central> <diretório que vai receber o clone>````
 
@@ -83,11 +83,11 @@ $ git clone ubuntu@localhost:/home/ubuntu/repo_central.git arquivos_clonados
 
 ![Clonando Repo Central](https://drive.google.com/uc?export=view&id=1EPEbjqk1iOHBQTNh49u46YgmmhZwePRN)
 
->> **Observação:** apareceu uma notificação de <i>warning</i>, pois como o repositório do Git está vazio aparece essa mensagem, caso contrário não apareceria. Outro ponto importante é que no <i>clone</i> feito conforme sintaxe acima é necessário que o servidor onde está o Git e a máquina cliente tenham o <i>SSH</i> instalado, como em nosso exemplo o servidor e o cliente são **a mesma máquina** só é necessária uma única configuração <i>SSH</i>.
+>> **Observação:** Apareceu uma notificação de <i>warning</i>, pois como o repositório do Git está vazio, caso contrário não apareceria. Outro ponto importante é que no <i>clone</i> feito conforme sintaxe acima é necessário que o servidor onde está o Git e a máquina cliente tenham o <i>SSH</i> instalado. Em nosso exemplo, o servidor e o cliente são **a mesma máquina**, necessitando uma única configuração <i>SSH</i>.
 
-Pronto, tudo instalado e configurado a partir de agora você pode utilizar esse ambiente para versionar seus códigos, além de poder distribuir o acesso a quem você queria que tenha esse acesso.
+Pronto! Tudo instalado e configurado a partir de agora você pode utilizar esse ambiente para versionar seus códigos, além de poder distribuir o acesso a quem você queria que tenha esse acesso.
 
-Em breve eu volto para ensinar os principais comandos do Git que podem ser utilizados, tanto no Git como no GitHub ou GitLab.
+Em breve eu volto para ensinar os principais comandos do Git, que podem ser utilizados, tanto no Git, como no GitHub ou GitLab.
 
 **Até.**
 
